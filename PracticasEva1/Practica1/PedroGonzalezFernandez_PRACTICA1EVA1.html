@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es un número</title>
+</head>
+
+<body>
+    <script>
+        let num = 0; //Variable que almacena el número que introduce el usuario.
+        do {
+            num = prompt("Introduce un número:"); //Almacena lo que el usuario introduzca en la variable 'num'.
+            if (isNaN(num)) {
+                alert("Debe introducr un número."); //Si num no es un número, advierte al usuario.
+            } else {
+                alert("Has introducido el " + num); //Si num es un número, lo mustra por pantalla.
+            }
+        } while (isNaN(num)); //Si num no es un número, repite el bucle de nuevo para que el usuario introduzca otro valor.
+    </script>
+</body>
+
+</html>

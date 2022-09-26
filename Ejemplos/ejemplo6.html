@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 4</title>
+</head>
+
+<body>
+    <img id="imagen" src="./img/imagen1.jpg" width="100" height="180">
+    <br>
+    <button onclick="cambiaPic()">Haz click aquí para cambiar la imagen.</button>
+    <script>
+        function cambiaPic() {
+            let miImagen = document.getElementById('imagen');
+            if (miImagen.src.match("imagen1"))
+                miImagen.src = "./img/imagen2.jpg";
+            else
+                miImagen.src = "./img/imagen1.jpg";
+        }
+    </script>
+</body>
+
+</html>

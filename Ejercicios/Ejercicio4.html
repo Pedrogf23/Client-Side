@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="unoYDiez">Pulsa el botón para generar 3 números aleatorios.</p>
+    <p id="unoYCien"></p>
+    <p id="diezYVeinte"></p>
+    <button onclick="cambiaNum()">Cambiar</button>
+    <script>
+        function cambiaNum() {
+            document.getElementById("unoYDiez").innerHTML = "Número aleatorio entre 1 y 10: " + parseInt(Math.random() * 10 + 1);
+            document.getElementById("unoYCien").innerHTML = "Número aleatorio entre 1 y 100: " + parseInt(Math.random() * 100 + 1);
+            document.getElementById("diezYVeinte").innerHTML = "Número aleatorio entre 10 y 20: " + parseInt(Math.random() * 10 + 10);
+        }
+    </script>
+</body>
+
+</html>
