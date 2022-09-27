@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        for(let i = 0; i < 2000; i++){
+            let color1 = parseInt(Math.random()*256);
+            let color2 = parseInt(Math.random()*256);
+            let color3 = parseInt(Math.random()*256);
+            let arriba = parseInt(Math.random()*101);
+            let izq = parseInt(Math.random()*101);
+            document.write(`<div style="position: absolute; background-color: rgb(${color1}, ${color2},${color3}); height: 50px; width:50px; top: ${arriba}%; left: ${izq}%"></div>`);
+        }
+    </script>
+</body>
+</html>
