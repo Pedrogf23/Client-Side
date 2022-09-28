@@ -1,3 +1,4 @@
+let jugar = true;
 do {
     let num = parseInt(Math.random()*100+1);
     let numUser = 0;
@@ -13,9 +14,9 @@ do {
         }
     } while((num != numUser) && numUser);
     if(num == numUser){
-        document.write("Enhorabuena, el número era "+ numUser);
+        alert("Enhorabuena, el número era "+ numUser);
     } else {
-        document.write("Ha perdido, el número era "+ num);
+        alert("Ha salido del juego, el número era "+ num);
     }
-    let jugar = confirm("¿Quiere jugar de nuevo?")
+    jugar = confirm("¿Quiere jugar de nuevo?")
 } while(jugar);
