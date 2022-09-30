@@ -13,11 +13,17 @@
             while(clave < 1 || clave > 100) {
                 let clave = parseInt(prompt("La clave debe ser un número entero entre 1 y 100."));
             }
+
+            while(clave >= 26){
+                clave -= 26;
+            }
+
             let texto = prompt("Introduce el texto a cifrar.");
             let textoCifrado = "";
             
             for(let i = 0; i < texto.length; i++){
                 let suma = texto.charCodeAt(i)+clave;
+
                 if(texto.charAt(i) == "z" || texto.charAt(i) == "Z"){
                     textoCifrado += String.fromCharCode(suma-26);
                 } else {
