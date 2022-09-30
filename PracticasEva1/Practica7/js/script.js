@@ -1,6 +1,6 @@
 let isDni1 = true;
 let isDni2 = false;
-let caracter = "TRWAGMYFPDXBNJZSQVHLCKEtrwagmyfpdxbnjzsqvhlcke";
+let caracter = "TRWAGMYFPDXBNJZSQVHLCKE";
 do {
     var dni = prompt("Introduzca su DNI:");
     if(dni === "0"){
@@ -12,7 +12,7 @@ do {
             }
         }
         for(let i = 0; i < caracter.length; i++){
-            if(dni.charAt(8) == caracter.charAt(i)){
+            if(dni.charAt(8).toUpperCase == caracter.charAt(i).toUpperCase){
                 isDni2 = true;
             }
         }
