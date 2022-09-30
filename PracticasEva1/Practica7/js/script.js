@@ -1,26 +1,30 @@
-let isDni1 = true;
-let isDni2 = false;
-let caracter = "TRWAGMYFPDXBNJZSQVHLCKE";
+let isDni = false;
+let caracteres = "TRWAGMYFPDXBNJZSQVHLCKE";
+
 do {
     var dni = prompt("Introduzca su DNI:");
-    if(dni === "0"){
-        alert("Ha introducido 0.");
-    } else if (dni.length == 9) {
-        for(let i = 0; i < 8; i++){
-            if(isNaN(dni.charAt(i))){
-                isDni1 = false;
+
+    if(dni.length == 9){
+        if((!isNaN(dni.substring(0,8))) && (isNaN(dni.substring(8)))){
+            var caracter = dni.substring(0,8) % 23;
+
+            if(caracteres.charAt(caracter) == dni.substring(8).toUpperCase()){
+                isDni = true;
             }
         }
-        for(let i = 0; i < caracter.length; i++){
-            if(dni.charAt(8).toUpperCase == caracter.charAt(i).toUpperCase){
-                isDni2 = true;
-            }
-        }
-    } else {
-        isDni1 = false;
-        isDni2 = false;
+    } else if(dni == "0"){
+        isDni = "x";
     }
-} while (isDni1 == false || isDni2 == false);
-if((isDni1 == true) && (isDni2 == true)){
-    alert("Su dni ("+ dni +") es correcto.");
+
+    if(!isDni){
+        alert("DNI no válido.");
+        if(!isNaN(caracter)){
+            alert("La letra de su DNI debería ser "+ caracteres.charAt(caracter));
+        }
+    }
+
+} while (isDni == false);
+
+if((isDni == true)){
+    alert("Su dni ("+ dni +") es válido.");
 }
