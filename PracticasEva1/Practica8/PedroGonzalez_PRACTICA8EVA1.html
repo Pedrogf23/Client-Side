@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado César</title>
+</head>
+<body>
+    <script>
+        let clave = parseInt(prompt("Introduce la clave de cifrado (1 - 100)."));
+        if(!isNaN(clave)) {
+            while(clave < 1 || clave > 100) {
+                let clave = parseInt(prompt("La clave debe ser un número entero entre 1 y 100."));
+            }
+            let texto = prompt("Introduce el texto a cifrar.");
+            let textoCifrado = "";
+            
+            for(let i = 0; i < texto.length; i++){
+                let suma = texto.charCodeAt(i)+clave;
+                if(texto.charAt(i) == "z" || texto.charAt(i) == "Z"){
+                    textoCifrado += String.fromCharCode(suma-26);
+                } else {
+                    if((suma > 122) || ((suma > 90) && (suma < 97))){
+                        textoCifrado += String.fromCharCode(suma-26);
+                    } else {
+                        textoCifrado += String.fromCharCode(suma);
+                    }
+                }
+            }
+
+            alert(textoCifrado);
+
+        }
+
+    </script>
+</body>
+</html>
