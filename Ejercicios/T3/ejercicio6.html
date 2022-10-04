@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 6</title>
+  </head>
+  <body>
+    <script>
+      var meses = [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre",
+      ];
+      alert(meses);
+      let mes = "";
+      for (let i = 0; i < meses.length; i++) {
+        if (meses[i].startsWith("Ju") || meses[i].endsWith("ero")) {
+          mes += "" + meses[i] + ", ";
+        }
+      }
+      alert(mes);
+    </script>
+  </body>
+</html>
