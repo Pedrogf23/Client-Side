@@ -21,10 +21,6 @@
   "prettier.enableDebugLogs": true,
   "editor.formatOnSave": true,
 
-  //PHP
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
   "settingsSync.ignoredSettings": [
     "path-intellisense.absolutePathToWorkspace",
     "path-intellisense.autoSlashAfterDirectory"
