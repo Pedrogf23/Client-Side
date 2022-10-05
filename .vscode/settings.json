@@ -1,6 +1,88 @@
 {
+  "open-in-browser.default": " firefox, mozilla firefox, ff,",
+  //GIT
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  //Comillas simples
+  "prettier.singleQuote": true,
+  //Fuente de la terminal
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  //barra a la derecha
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  //Tema actual
+  "workbench.colorTheme": "oh-lucy",
+  "vsicons.dontShowNewVersionMessage": true,
+
+  //Prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.jsxSingleQuote": true,
+  "prettier.enableDebugLogs": true,
   "editor.formatOnSave": true,
+
+  //PHP
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "settingsSync.ignoredSettings": [
+    "path-intellisense.absolutePathToWorkspace",
+    "path-intellisense.autoSlashAfterDirectory"
+  ],
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.iconTheme": "eq-material-theme-icons-palenight",
+  // Using the light mode
+  "window.zoomLevel": 2,
+  "indentRainbow.indicatorStyle": "light",
+  // we use a simple 1 pixel wide line
+  "indentRainbow.lightIndicatorStyleLineWidth": 1.2,
+  // the same colors as above but more visible
+  "indentRainbow.colors": [
+    "rgba(92,174,239,0.2)",
+    "rgba(223,185,118,0.2)",
+    "rgba(193,114,217,0.2)",
+    "rgba(79,177,188,0.2)",
+    "rgba(151,194,108,0.2)",
+    "rgba(171,178,192,0.2)"
+  ],
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+  "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#5caeef",
+    "editorBracketHighlight.foreground2": "#dfb976",
+    "editorBracketHighlight.foreground3": "#c172d9",
+    "editorBracketHighlight.foreground4": "#4fb1bc",
+    "editorBracketHighlight.foreground5": "#97c26c",
+    "editorBracketHighlight.foreground6": "#abb2c0",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
+  },
+  "explorer.confirmDragAndDrop": false,
+  // Configures if the built-in HTML language suggests HTML5 tags, properties and values.
+  "html.suggest.html5": true,
+  //HTML autoclosing and rename
+  "auto-rename-tag.activationOnLanguage": [true, "*"],
+  "auto-close-tag.activationOnLanguage": [
+    true,
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "plist"
+  ]
 }
