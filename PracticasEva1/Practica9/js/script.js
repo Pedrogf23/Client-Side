@@ -1,17 +1,17 @@
 // Constantes que almacenan los valores permitidos.
-const minus = "aáàbcçdeéèfghiìíjklmnñoóòpqrstuùúüvwxyz";
-const mayus = "AÁÀBCÇDEÉÈFGHIÍÌJKLMNÑOÓÒPQRSTUÚÙÜVWXYZ";
-const nums = "0123456789";
-const otros = "!@#$%&?¿¡<> ;,:.*+-_";
+const minus = 'aáàbcçdeéèfghiìíjklmnñoóòpqrstuùúüvwxyz';
+const mayus = 'AÁÀBCÇDEÉÈFGHIÍÌJKLMNÑOÓÒPQRSTUÚÙÜVWXYZ';
+const nums = '0123456789';
+const otros = '!@#$%&?¿¡<> ;,:.*+-_';
 
 // Comprobación del nombre de usuario.
 let isUser = true;
 do {
-  var user = prompt("Introduzca el nombre de usuario:");
+  var user = prompt('Introduzca el nombre de usuario:');
 
   // Si cancela el prompt, se termina el programa.
   if (user === null) {
-    alert("Ha cancelado la operación");
+    alert('Ha cancelado la operación');
   }
 
   // Comprueba que cada caracter presente en 'user' sea una letra minúscula o un número.
@@ -25,7 +25,7 @@ do {
 
   // Le dice al usuario si el nombre es correcto o no.
   if (isUser == false) {
-    alert("Nombre de usuario inválido.");
+    alert('Nombre de usuario inválido.');
   } else {
     alert("Usuario '" + user + "' es correcto.");
   }
@@ -36,11 +36,11 @@ do {
 // Comprobación de la contraseña.
 let isPasswd = true;
 do {
-  var passwd = prompt("Introduzca la contraseña:");
+  var passwd = prompt('Introduzca la contraseña:');
 
   // Si cancela el prompt, se termina el programa.
   if (passwd === null) {
-    alert("Ha cancelado la operación");
+    alert('Ha cancelado la operación');
   }
 
   // Variables que cuentan cúantos caracteres de cada tipo permitido hay presentes en la contraseña.
@@ -83,9 +83,9 @@ do {
 
   // Le dice al usuario si la contraseña es correcta o no.
   if (isPasswd == false) {
-    alert("Contraseña inválida.");
+    alert('Contraseña inválida.');
   } else {
-    alert("Contraseña correcta.");
+    alert('Contraseña correcta.');
   }
 
   // Mientras que la contraseña sea inválida, repite todo el proceso anterior.
