@@ -9,21 +9,41 @@
   <body>
     <script>
       let num1 = [1.15, 2.33, 3.99, 4.5];
-      let num2 = ["cinco", "seis", "siete"];
+      let num2 = ['cinco', 'seis', 'siete'];
 
       // 1) Unir los dos arrays.
       let num3 = num1.concat(num2);
       alert(num3);
 
       // 2) Eliminar el primer y último elemento.
+      num3.pop();
+      num3.shift();
+      alert(num3);
 
       // 3) Añadir “primero” al principio y “otros” al final del Array.
+      num3.push('otros');
+      num3.unshift('primero');
+      alert(num3);
 
       // 4) Sustituir cada elemento numérico por el mismo, pero sin su parte decimal.
+      for (let i = 1; i < 4; i++) {
+        num3.splice(i, 1, parseInt(num3[i]));
+      }
+      alert(num3);
 
       // 5) Mostrar por pantalla los elementos como cadena de caracteres en la forma uno y otro y otroMas
+      let num3s = num3.join(' y ');
+      alert(num3s);
 
       // 6) Mostrar por pantalla solo los datos numéricos.
+      let num4 = [];
+      for (let i = 0, j = 0; i < num3.length; i++) {
+        if (!isNaN(num3[i])) {
+          num4[j] = num3[i];
+          j++;
+        }
+      }
+      alert(num4);
     </script>
   </body>
 </html>
