@@ -4,15 +4,16 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ejercicio 14</title>
+        <title>Ejercicio 15</title>
     </head>
     <body>
         <script>
-            let regex =
-                /^[KLXYZklxyz0-9][0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKEtrwagmyfpdxbnjzsqvhlcke]$/;
+            let regexp =
+                /(^[1-4][0-9]{4}$)|(^[5][0-2][0-9]{3}$)|(^[0][1-9][0-9]{3}$)/;
+
             do {
-                var dni = prompt('Introduce tu DNI/NIF.');
-            } while (!regex.test(dni));
+                var cp = prompt('Introduce tu código postal. ');
+            } while (!regexp.test(cp));
         </script>
     </body>
 </html>
