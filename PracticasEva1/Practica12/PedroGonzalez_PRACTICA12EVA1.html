@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RegExp Asako 2</title>
+    </head>
+    <body>
+        <script>
+            // Valida nombre y apellidos en un solo campo.
+            let regex1 =
+                /^([A-zÁÉÍÓÚáéíóúÑñ]+\s[A-zÁÉÍÓÚáéíóúÑñ]+\s[A-zÁÉÍÓÚáéíóúÑñ]+)$/;
+            do {
+                var name = prompt('Introduce tu nombre y apellidos');
+            } while (!regex1.test(name));
+            // Valida correctamente una fecha formato dd/mm/aaaa.
+            let regex2 =
+                /(^0[1-9]|^[1-2][0-9]|^3[0-2])\/(0[1-9]|1[0-2])\/(19[0-9]{2}$|20[0-1][0-9]$|202[0-3]$)/;
+            do {
+                var date = prompt('Tu fecha de nacimiento');
+            } while (!regex2.test(date));
+            // Valida que el formato de email es correcto.
+            let regex3 =
+                /^[A-z0-9ÁÉÍÓÚÜÇÑáéíóúüçñ\._%\+\-]+@[A-z0-9ÁÉÍÓÚÜÇÑáéíóúüçñ\-]+(\.[A-z0-9ÁÉÍÓÚÜÇÑáéíóúüçñ\-]+)?\.[A-z]{2,}$/;
+            do {
+                var email = prompt('Introduce tu email.');
+            } while (!regex3.test(email));
+            // Valida que el formato url es correcto.
+            let regex4 =
+                /^(http:\/\/|https:\/\/)?www\.[A-z\.]+\.[a-z]{2,}(\/[A-z\/]+\/)?$/;
+            do {
+                var url = prompt('Introduce tu url.');
+            } while (!regex4.test(url));
+        </script>
+    </body>
+</html>
