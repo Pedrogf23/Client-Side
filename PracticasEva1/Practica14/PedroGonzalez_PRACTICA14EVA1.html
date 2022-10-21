@@ -24,14 +24,13 @@
                 let red = parseInt(Math.random() * 256);
                 let green = parseInt(Math.random() * 256);
                 let blue = parseInt(Math.random() * 256);
-                //Se le añade el atributo 'style' con el valor 'background-color', que junto
-                //a las variables hará que el fondo tenga un color aleatorio.
-                document.write(
-                    `<div id="fondo" style="background-color: RGB(${red}, ${green}, ${blue})" ></div>`
-                );
+
+                let bgColor = `rgb(${red},${green},${blue})`;
+
+                document.getElementById('fondo').style.background = bgColor;
             }
 
-            setInterval(fondoAleatorio(), 2000);
+            setInterval(fondoAleatorio, 2000);
         </script>
     </body>
 </html>
