@@ -3,7 +3,9 @@ function parImpar(num) {
 }
 function escribirNumsParImpar() {
     for (let i = 0; i < 50; i++) {
-        let num = Math.random() * 10000 + 1;
+        let num = parseInt(Math.random() * 10000 + 1);
         document.write(num + ' es ' + parImpar(num) + '<br>');
     }
 }
+
+escribirNumsParImpar();
