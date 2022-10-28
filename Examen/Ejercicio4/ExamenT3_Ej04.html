@@ -11,12 +11,13 @@
         <script>
             function muestraRefran(array) {
                 let i = parseInt(Math.random() * array.length);
-                document.getElementById('refran').innerHTML(array[i]);
+                document.getElementById('refran').innerHTML = array[i];
             }
 
             let refran = '';
             let array = [];
             let i = 0;
+            let regex = /^[A-Za-z0-9ÁÉÍÓÚáéíóúÑñÜü]$/;
             do {
                 refran = prompt('Introduzca un refrán');
                 if (refran != '') {
