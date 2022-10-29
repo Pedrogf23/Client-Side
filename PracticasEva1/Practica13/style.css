@@ -1,13 +1,12 @@
 :root {
     --num-columnas: 10;
     --num-filas: 10;
-    --size: 32px;
 }
 
 #tablero {
     display: grid;
-    grid-template-columns: repeat(var(--num-columnas), var(--size));
-    grid-template-rows: repeat(var(--num-filas), var(--size));
+    grid-template-columns: repeat(var(--num-columnas), 32px);
+    grid-template-rows: repeat(var(--num-filas), 32px);
 }
 
 #tablero div {
