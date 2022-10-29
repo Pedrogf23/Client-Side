@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="refran"></p>
+        <script>
+            function muestraRefran(array) {
+                let i = parseInt(Math.random() * array.length);
+                document.getElementById('refran').innerHTML = array[i];
+            }
+
+            let refran = '';
+            let array = [];
+            let i = 0;
+            let regex = /^[A-Za-z0-9ÁÉÍÓÚáéíóúÑñÜü,\.]$/;
+            do {
+                refran = prompt('Introduzca un refrán');
+                if (refran != '') {
+                    array[i] = refran;
+                    i++;
+                }
+            } while (refran != '');
+
+            setInterval(muestraRefran, 2000, array);
+        </script>
+    </body>
+</html>

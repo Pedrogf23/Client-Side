@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Intervalos</title>
+        <style>
+            * {
+                margin: 0;
+            }
+            #fondo {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="fondo"></div>
+        <script>
+            function fondoAleatorio() {
+                //Variables que indicarán la cantidad de rojo, verde y azul presentes en el color del fondo.
+                let red = parseInt(Math.random() * 256);
+                let green = parseInt(Math.random() * 256);
+                let blue = parseInt(Math.random() * 256);
+
+                let bgColor = `rgb(${red},${green},${blue})`;
+
+                document.getElementById('fondo').style.background = bgColor;
+            }
+
+            setInterval(fondoAleatorio, 2000);
+        </script>
+    </body>
+</html>
