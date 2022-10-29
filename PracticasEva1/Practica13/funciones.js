@@ -83,7 +83,7 @@ function buscarMinas(tableroArray) {
                     for (let zColumna = columna - 1; zColumna <= columna + 1; zColumna++) {
                         // Ahora hay que comprobar que la casilla que estamos comprobando, esté dentro del tablero.
                         // Es decir, si las filas y las coolumnas que apuntan a la casilla que estamos mirando son mayores que
-                        // -1  pero mayores que la cantidad de filas o columnas totales correspondientes.
+                        // -1  pero menores que la cantidad de filas o columnas totales correspondientes.
                         if (zFila > -1 && zColumna > -1 && zFila < tableroArray.length && zColumna < tableroArray[0].length) {
                             // Entonces, si en esa casilla hay una mina.
                             if (tableroArray[zFila][zColumna] == 'x') {
