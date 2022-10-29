@@ -11,7 +11,9 @@
         <script>
             function fibonacci(x, next, num1 = 0, num2 = 1) {
                 document.getElementById('parrafo').innerHTML += ' ' + num1;
-                fibonacci(x - 1, num1 + num2, num2, num1 + num2);
+                if (x != 0) {
+                    fibonacci(x - 1, num1 + num2, num2, num1 + num2);
+                }
 
                 // for (let i = 0; i <= x; i++) {
                 //     document.getElementById('parrafo').innerHTML += ' ' + num1;
