@@ -8,20 +8,17 @@
     </head>
     <body>
         <script>
-            let array = ['Nathan', 'Toki', 'Pickles', 'Swiksgaar', 'MurderFace'];
-            document.write('¿Todos los elementos tienen menos de 10 caracteres? ');
-            document.write(
-                array.every(function (valor, indice, array) {
-                    return valor.length < 10;
-                })
-            );
-            document.write('<br>');
-            document.write('¿Y más de 5? ');
-            document.write(
-                array.every(function (valor, indice, array) {
-                    return valor.length > 5;
-                })
-            );
+            var socios = [
+                { nombre: 'Seth', apellido1: 'Unknown', DNI: '44.922.123S' },
+                { nombre: 'Pickles', apellido1: 'Unknown', DNI: 'X5.112.674P' },
+                { nombre: 'Magnus', apellido1: 'Ámdeath', DNI: '45.999.444X' },
+            ];
+
+            function mostrarSocio(valor, indice) {
+                document.write(indice + ' --> ' + valor.nombre + ', ' + valor.apellido1 + ', ' + valor.DNI + '<br>');
+            }
+
+            socios.forEach(mostrarSocio);
         </script>
     </body>
 </html>

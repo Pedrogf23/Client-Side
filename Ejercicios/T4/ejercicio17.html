@@ -9,9 +9,19 @@
     <body>
         <script>
             let array = ['Nathan', 'Toki', 'Pickles', 'Swiksgaar', 'MurderFace'];
-            document.write(array.filter((x) => x.length > 6));
+            document.write('¿Todos los elementos tienen menos de 10 caracteres? ');
+            document.write(
+                array.every(function (valor, indice, array) {
+                    return valor.length < 10;
+                })
+            );
             document.write('<br>');
-            document.write(array.filter((x) => x.startsWith('M') || x.startsWith('N')));
+            document.write('¿Y más de 5? ');
+            document.write(
+                array.every(function (valor, indice, array) {
+                    return valor.length > 5;
+                })
+            );
         </script>
     </body>
 </html>

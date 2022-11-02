@@ -13,12 +13,15 @@
                 { nombre: 'Pickles', apellido1: 'Unknown', DNI: 'X5.112.674P' },
                 { nombre: 'Magnus', apellido1: 'Ámdeath', DNI: '45.999.444X' },
             ];
+            var sociosSort = socios.sort(function (a, b) {
+                if (a.apellido1 === b.apellido1) {
+                    return a.nombre.localeCompare(b.nombre);
+                } else {
+                    return a.apellido1.localeCompare(b.apellido1);
+                }
+            });
 
-            function mostrarSocio(valor, indice) {
-                document.write(indice + ' --> ' + valor.nombre + ', ' + valor.apellido1 + ', ' + valor.DNI + '<br>');
-            }
-
-            socios.forEach(mostrarSocio);
+            console.log(sociosSort);
         </script>
     </body>
 </html>
