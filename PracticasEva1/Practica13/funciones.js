@@ -6,9 +6,7 @@ function generarTableroVacio() {
     // Si hay menos de 2 filas o más de 20, se le vuelve a preguntar
     // hasta que introduzca un número válido.
     while (filas < 2 || filas > 20) {
-        filas = parseInt(
-            prompt('Número inválido, introduce las filas del tablero.')
-        );
+        filas = parseInt(prompt('Número inválido, introduce las filas del tablero.'));
     }
 
     // Se le pregunta al usuario por las columnas que debe tener el array.
@@ -16,9 +14,7 @@ function generarTableroVacio() {
     // Si hay menos de 2 columnas o más de 20, se le vuelve a preguntar
     // hasta que introduzca un número válido.
     while (columnas < 2 || columnas > 20) {
-        columnas = parseInt(
-            prompt('Número inválido, introduce las columnas del tablero.')
-        );
+        columnas = parseInt(prompt('Número inválido, introduce las columnas del tablero.'));
     }
 
     // Array que contendrá el tablero.
@@ -45,13 +41,8 @@ function colocarMinas(tableroArray) {
     let numMinas = parseInt(prompt('Introduce las minas del tablero.'));
     // Si hay menos de 2 minas o más de la mitad de casillas totales,
     // se le vuelve a preguntar hasta que introduzca un valor válido.
-    while (
-        numMinas < 2 ||
-        numMinas > (tableroArray.length * tableroArray[0].length) / 2
-    ) {
-        numMinas = parseInt(
-            prompt('Número inválido, introduce las minas del tablero.')
-        );
+    while (numMinas < 2 || numMinas > (tableroArray.length * tableroArray[0].length) / 2) {
+        numMinas = parseInt(prompt('Número inválido, introduce las minas del tablero.'));
     }
 
     // Este bucle se repite por cada mina que haya introducido el usuario.
@@ -89,20 +80,11 @@ function buscarMinas(tableroArray) {
                     // Esto hace que se recorra entera la columna anterior, la actual y la siguiente.
                     // Pero con el límite anterior de las filas, conseguimos que recorran las 8 casillas de
                     // alrededor más la actual.
-                    for (
-                        let zColumna = columna - 1;
-                        zColumna <= columna + 1;
-                        zColumna++
-                    ) {
+                    for (let zColumna = columna - 1; zColumna <= columna + 1; zColumna++) {
                         // Ahora hay que comprobar que la casilla que estamos comprobando, esté dentro del tablero.
                         // Es decir, si las filas y las coolumnas que apuntan a la casilla que estamos mirando son mayores que
                         // -1  pero menores que la cantidad de filas o columnas totales correspondientes.
-                        if (
-                            zFila > -1 &&
-                            zColumna > -1 &&
-                            zFila < tableroArray.length &&
-                            zColumna < tableroArray[0].length
-                        ) {
+                        if (zFila > -1 && zColumna > -1 && zFila < tableroArray.length && zColumna < tableroArray[0].length) {
                             // Entonces, si en esa casilla hay una mina.
                             if (tableroArray[zFila][zColumna] == 'x') {
                                 // Se suma uno a la variable que cuenta las minas que se encuentran.
@@ -124,12 +106,8 @@ function pintarTablero(tableroArray) {
     // Recogemos el elemento del html que almacenará el tablero.
     let tablero = document.getElementById('tablero');
     // Cambiamos el valor de las variables en css.
-    document
-        .querySelector('html')
-        .style.setProperty('--num-filas', tableroArray.length);
-    document
-        .querySelector('html')
-        .style.setProperty('--num-columnas', tableroArray[0].length);
+    document.querySelector('html').style.setProperty('--num-filas', tableroArray.length);
+    document.querySelector('html').style.setProperty('--num-columnas', tableroArray[0].length);
     // El tema del css está sacado de un ejemplo en internet, hecho para que el tablero
     // quede mejor visualmente en pantalla.
 
