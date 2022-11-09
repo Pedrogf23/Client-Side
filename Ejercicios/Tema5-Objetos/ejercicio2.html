@@ -39,17 +39,17 @@
                 };
 
                 this.muestraConf = function () {
-                    return `Coche: \nMarca --> ${this.getMarca()} \nCombustible--> ${this.getCombustible()} \nCantidad --> ${this.getCantidad()}`;
+                    console.log(`Coche: \nMarca --> ${this.getMarca()} \nCombustible--> ${this.getCombustible()} \nCantidad --> ${this.getCantidad()}`);
                 };
             }
 
             let miCoche = new Coche('Nissan Qashqai', 'Diésel');
 
-            console.log(miCoche.muestraConf());
+            miCoche.muestraConf();
             miCoche.setMarca('Volskwagen Golf');
             miCoche.setCombustible('Gasolina');
             miCoche.rellenarDeposito(50);
-            console.log(miCoche.muestraConf());
+            miCoche.muestraConf();
         </script>
     </body>
 </html>
