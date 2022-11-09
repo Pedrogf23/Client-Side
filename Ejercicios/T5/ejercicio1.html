@@ -14,11 +14,11 @@
                 VelGiro: 0,
                 VelDesp: 0,
                 muestraConf: function () {
-                    return `Meteorito: x -> ${this.x}, y -> ${this.y}, Velocidad de giro -> ${this.VelGiro}, Velocidad de desplazamiento -> ${this.VelDesp},`;
+                    console.log(`Meteorito: \nx --> ${meteorito.x} \ny --> ${meteorito.y} \nVelocidad de giro --> ${meteorito.VelGiro} \nVelocidad de desplazamiento --> ${meteorito.VelDesp}`);
                 },
             };
 
-            console.log(meteorito.muestraConf());
+            meteorito.muestraConf();
         </script>
     </body>
 </html>
