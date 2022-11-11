@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ejercicio 4 Examen</title>
-    </head>
-    <body>
-        <h2>El refrán del momento es...</h2>
-        <p id="refran"></p>
-        <script>
-            function guardarRefranes() {
-                let arrayRefranes = [];
-                let refran = '';
-                i = 0;
-                let regex = /^[A-Za-z0-9ÁÉÍÓÚÜáéíóúüÑñÇç]+$/;
-                do {
-                    refran = prompt('Introduce un refrán:');
-                    if (refran != '') {
-                        arrayRefranes[i] = refran;
-                        i++;
-                    }
-                } while (refran != '');
-                return arrayRefranes;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 4 Examen</title>
+  </head>
+  <body>
+    <h2>El refrán del momento es...</h2>
+    <p id="refran"></p>
+    <script>
+      function guardarRefranes() {
+        let arrayRefranes = [];
+        let refran = '';
+        i = 0;
+        let regex = /^[A-Za-z0-9ÁÉÍÓÚÜáéíóúüÑñÇç]+$/;
+        do {
+          refran = prompt('Introduce un refrán:');
+          if (refran != '') {
+            arrayRefranes[i] = refran;
+            i++;
+          }
+        } while (refran != '');
+        return arrayRefranes;
+      }
 
-            let refranes = guardarRefranes();
+      let refranes = guardarRefranes();
 
-            function mostrarRefranes(refranes) {
-                let i = parseInt(Math.random() * refranes.length);
-                document.getElementById('refran').innerHTML = refranes[i];
-            }
+      function mostrarRefranes(refranes) {
+        let i = parseInt(Math.random() * refranes.length);
+        document.getElementById('refran').innerHTML = refranes[i];
+      }
 
-            setInterval(mostrarRefranes, 2000, refranes);
-        </script>
-    </body>
+      setInterval(mostrarRefranes, 2000, refranes);
+    </script>
+  </body>
 </html>
