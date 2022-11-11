@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ejercicio 1</title>
+    </head>
+    <body>
+        <script>
+            function Coche(marca, combustible) {
+                this.marca = marca;
+                this.combustible = combustible;
+                this.cantidad = 0;
+
+                this.setMarca = function (marca) {
+                    this.marca = marca;
+                };
+                this.getMarca = function () {
+                    return this.marca;
+                };
+
+                this.setCombustible = function (combustible) {
+                    this.combustible = combustible;
+                };
+                this.getCombustible = function () {
+                    return this.combustible;
+                };
+
+                this.setCantidad = function (cantidad) {
+                    this.cantidad = cantidad;
+                };
+                this.getCantidad = function () {
+                    return this.cantidad;
+                };
+
+                this.rellenarDeposito = function (litros) {
+                    this.setCantidad(litros);
+                };
+
+                this.muestraConf = function () {
+                    console.log(
+                        `Coche: \nMarca --> ${this.getMarca()} \nCombustible --> ${this.getCombustible()} \nCantidad --> ${this.getCantidad()}`
+                    );
+                };
+            }
+
+            function crearCoches() {
+                do {
+                    let coches = [];
+                    let marca = prompt('Introduzca la marca del coche:');
+                    let combustible = prompt('Introduzca el tipo de combistible del coche:');
+                    let i = 0;
+                    if (typeof marca == 'string' && typeof combustible == 'string') {
+                        coches[i] = Coche(marca, combustible);
+                        i++;
+                    }
+                } while (typeof marca == 'string' && typeof combustible == 'string');
+                return coches;
+            }
+
+            alert(crearCoches());
+        </script>
+    </body>
+</html>
