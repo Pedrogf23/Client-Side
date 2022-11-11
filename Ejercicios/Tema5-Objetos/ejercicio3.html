@@ -39,27 +39,27 @@
                 };
 
                 this.muestraConf = function () {
-                    console.log(
-                        `Coche: \nMarca --> ${this.getMarca()} \nCombustible --> ${this.getCombustible()} \nCantidad --> ${this.getCantidad()}`
-                    );
+                    return `Coche: \nMarca --> ${this.getMarca()} \nCombustible --> ${this.getCombustible()} \nCantidad --> ${this.getCantidad()}`;
                 };
             }
 
-            function crearCoches() {
-                do {
-                    let coches = [];
-                    let marca = prompt('Introduzca la marca del coche:');
-                    let combustible = prompt('Introduzca el tipo de combistible del coche:');
-                    let i = 0;
-                    if (typeof marca == 'string' && typeof combustible == 'string') {
-                        coches[i] = Coche(marca, combustible);
-                        i++;
-                    }
-                } while (typeof marca == 'string' && typeof combustible == 'string');
-                return coches;
-            }
+            let seguir = true;
+            let coches = [];
 
-            alert(crearCoches());
+            do {
+                let miCoche = new Coche();
+
+                miCoche.setMarca(prompt('Introduzca la marca:'));
+                miCoche.setCombustible(prompt('Introduzca el combustible:'));
+
+                coches.push(miCoche);
+
+                seguir = confirm('¿Desea seguir?');
+            } while (seguir == true);
+
+            for (let coche of coches) {
+                alert(coche.muestraConf());
+            }
         </script>
     </body>
 </html>
