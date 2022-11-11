@@ -72,12 +72,7 @@ do {
   }
 
   // Si en la contraseña falta algún tipo de caracter, la contraseña es inválida.
-  if (
-    minusPasswd == 0 ||
-    mayusPasswd == 0 ||
-    numsPasswd == 0 ||
-    otrosPasswd == 0
-  ) {
+  if (minusPasswd == 0 || mayusPasswd == 0 || numsPasswd == 0 || otrosPasswd == 0) {
     isPasswd = false;
   }
 

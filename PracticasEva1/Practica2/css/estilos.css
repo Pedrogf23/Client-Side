@@ -1,9 +1,9 @@
 table {
-    border-collapse: collapse;
-    width: 50%;
-    margin: auto;
+  border-collapse: collapse;
+  width: 50%;
+  margin: auto;
 }
 
 td {
-    border: 2px solid black;
+  border: 2px solid black;
 }

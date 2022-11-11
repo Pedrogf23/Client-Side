@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ejercicio 16</title>
-    </head>
-    <body>
-        <script>
-            var socios = [
-                { nombre: 'Seth', apellido1: 'Unknown', DNI: '44.922.123S' },
-                { nombre: 'Pickles', apellido1: 'Unknown', DNI: 'X5.112.674P' },
-                { nombre: 'Magnus', apellido1: 'Ámdeath', DNI: '45.999.444X' },
-            ];
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 16</title>
+  </head>
+  <body>
+    <script>
+      var socios = [
+        { nombre: 'Seth', apellido1: 'Unknown', DNI: '44.922.123S' },
+        { nombre: 'Pickles', apellido1: 'Unknown', DNI: 'X5.112.674P' },
+        { nombre: 'Magnus', apellido1: 'Ámdeath', DNI: '45.999.444X' },
+      ];
 
-            function mostrarSocio(valor, indice) {
-                document.write(indice + ' --> ' + valor.nombre + ', ' + valor.apellido1 + ', ' + valor.DNI + '<br>');
-            }
+      function mostrarSocio(valor, indice) {
+        document.write(indice + ' --> ' + valor.nombre + ', ' + valor.apellido1 + ', ' + valor.DNI + '<br>');
+      }
 
-            socios.forEach(mostrarSocio);
-        </script>
-    </body>
+      socios.forEach(mostrarSocio);
+    </script>
+  </body>
 </html>

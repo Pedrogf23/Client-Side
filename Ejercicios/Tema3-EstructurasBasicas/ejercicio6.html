@@ -8,25 +8,12 @@
   </head>
   <body>
     <script>
-      var meses = [
-        "Enero",
-        "Febrero",
-        "Marzo",
-        "Abril",
-        "Mayo",
-        "Junio",
-        "Julio",
-        "Agosto",
-        "Septiembre",
-        "Octubre",
-        "Noviembre",
-        "Diciembre",
-      ];
+      var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
       alert(meses);
-      let mes = "";
+      let mes = '';
       for (let i = 0; i < meses.length; i++) {
-        if (meses[i].startsWith("Ju") || meses[i].endsWith("ero")) {
-          mes += "" + meses[i] + ", ";
+        if (meses[i].startsWith('Ju') || meses[i].endsWith('ero')) {
+          mes += '' + meses[i] + ', ';
         }
       }
       alert(mes);

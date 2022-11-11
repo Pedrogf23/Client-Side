@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Callback</title>
-    </head>
-    <body>
-        <script>
-            function muestra(dato, funcion) {
-                document.write(funcion(dato));
-            }
-            muestra(12, function (y) {
-                return 2 * y;
-            });
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback</title>
+  </head>
+  <body>
+    <script>
+      function muestra(dato, funcion) {
+        document.write(funcion(dato));
+      }
+      muestra(12, function (y) {
+        return 2 * y;
+      });
+    </script>
+  </body>
 </html>

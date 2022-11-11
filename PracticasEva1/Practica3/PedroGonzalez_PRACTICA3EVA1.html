@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fondo aleatorio</title>
     <style>
-        * {
-            margin: 0;
-        }
-        #fondo{
-            width: 100%;
-            height: 100%;
-            position: fixed;
-        }
+      * {
+        margin: 0;
+      }
+      #fondo {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="fondo"></div>
     <script>
-        //Variables que indicarán la cantidad de rojo, verde y azul presentes en el color del fondo.
-        let color1 = parseInt(Math.random()*256);
-        let color2 = parseInt(Math.random()*256);
-        let color3 = parseInt(Math.random()*256);
-        //Se le añade el atributo 'style' con el valor 'background-color', que junto
-        //a las variables hará que el fondo tenga un color aleatorio.
-        document.write(`<div id="fondo" style="background-color: RGB(${color1}, ${color2}, ${color3})" ></div>`);
+      //Variables que indicarán la cantidad de rojo, verde y azul presentes en el color del fondo.
+      let color1 = parseInt(Math.random() * 256);
+      let color2 = parseInt(Math.random() * 256);
+      let color3 = parseInt(Math.random() * 256);
+      //Se le añade el atributo 'style' con el valor 'background-color', que junto
+      //a las variables hará que el fondo tenga un color aleatorio.
+      document.write(`<div id="fondo" style="background-color: RGB(${color1}, ${color2}, ${color3})" ></div>`);
     </script>
-</body>
+  </body>
 </html>

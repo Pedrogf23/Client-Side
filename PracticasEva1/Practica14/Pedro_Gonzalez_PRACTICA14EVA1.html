@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Fibonacci</title>
-    </head>
-    <body>
-        <p id="parrafo"></p>
-        <script>
-            // Función que muestra x valores de la sucesión de fibonacci.
-            function fibonacci(x, next, num1 = 0, num2 = 1) {
-                document.getElementById('parrafo').innerHTML += ' ' + num1;
-                if (x != 0) {
-                    fibonacci(x - 1, num1 + num2, num2, num1 + num2);
-                }
-            }
-            fibonacci(10);
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci</title>
+  </head>
+  <body>
+    <p id="parrafo"></p>
+    <script>
+      // Función que muestra x valores de la sucesión de fibonacci.
+      function fibonacci(x, next, num1 = 0, num2 = 1) {
+        document.getElementById('parrafo').innerHTML += ' ' + num1;
+        if (x != 0) {
+          fibonacci(x - 1, num1 + num2, num2, num1 + num2);
+        }
+      }
+      fibonacci(10);
+    </script>
+  </body>
 </html>

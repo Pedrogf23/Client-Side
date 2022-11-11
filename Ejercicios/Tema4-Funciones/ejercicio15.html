@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ejercicio 15</title>
-    </head>
-    <body>
-        <script>
-            var socios = [
-                { nombre: 'Seth', apellido1: 'Unknown', DNI: '44.922.123S' },
-                { nombre: 'Pickles', apellido1: 'Unknown', DNI: 'X5.112.674P' },
-                { nombre: 'Magnus', apellido1: 'Ámdeath', DNI: '45.999.444X' },
-            ];
-            var sociosSort = socios.sort(function (a, b) {
-                if (a.apellido1 === b.apellido1) {
-                    return a.nombre.localeCompare(b.nombre);
-                } else {
-                    return a.apellido1.localeCompare(b.apellido1);
-                }
-            });
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 15</title>
+  </head>
+  <body>
+    <script>
+      var socios = [
+        { nombre: 'Seth', apellido1: 'Unknown', DNI: '44.922.123S' },
+        { nombre: 'Pickles', apellido1: 'Unknown', DNI: 'X5.112.674P' },
+        { nombre: 'Magnus', apellido1: 'Ámdeath', DNI: '45.999.444X' },
+      ];
+      var sociosSort = socios.sort(function (a, b) {
+        if (a.apellido1 === b.apellido1) {
+          return a.nombre.localeCompare(b.nombre);
+        } else {
+          return a.apellido1.localeCompare(b.apellido1);
+        }
+      });
 
-            console.log(sociosSort);
-        </script>
-    </body>
+      console.log(sociosSort);
+    </script>
+  </body>
 </html>

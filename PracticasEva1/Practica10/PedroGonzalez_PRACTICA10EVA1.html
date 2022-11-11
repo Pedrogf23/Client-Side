@@ -11,9 +11,7 @@
       let clave = prompt('Introduce la clave de cifrado (1 - 100).');
       if (!isNaN(clave)) {
         while (clave < 1 || clave > 100000) {
-          clave = parseInt(
-            prompt('La clave debe ser un número entero entre 1 y 100.')
-          );
+          clave = parseInt(prompt('La clave debe ser un número entero entre 1 y 100.'));
         }
 
         let texto = prompt('Introduce el texto a cifrar.');

@@ -1,35 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <p id="innethtml"></p>
     <script>
-        let nombre = prompt("Introduzca su nombre:");
-        let apellido1 = prompt("Introduzaca su 1er apellido.");
-        let apellido2 = prompt("Introduzaca su 2do apellido.");
-        let direccion = prompt("Introduzaca su dirección");
-        let telefono = prompt("Introduzaca su teléfono");
-        let dni = prompt("Introduzaca su dni");
+      let nombre = prompt('Introduzca su nombre:');
+      let apellido1 = prompt('Introduzaca su 1er apellido.');
+      let apellido2 = prompt('Introduzaca su 2do apellido.');
+      let direccion = prompt('Introduzaca su dirección');
+      let telefono = prompt('Introduzaca su teléfono');
+      let dni = prompt('Introduzaca su dni');
 
-        // Mostrar con alert:
-        alert("Su nombre es " + nombre + ", Sus apellidos son " + apellido1 + " " + apellido2 + ", Su direccion es " + direccion + ", Su telefono es " + telefono + ", Su dni es " + dni);
+      // Mostrar con alert:
+      alert(
+        'Su nombre es ' +
+          nombre +
+          ', Sus apellidos son ' +
+          apellido1 +
+          ' ' +
+          apellido2 +
+          ', Su direccion es ' +
+          direccion +
+          ', Su telefono es ' +
+          telefono +
+          ', Su dni es ' +
+          dni
+      );
 
-        // Mostrar con document.write:
-        document.write("Su nombre es " + nombre + ", Sus apellidos son " + apellido1 + " " + apellido2 + ", Su direccion es " + direccion + ", Su telefono es " + telefono + ", Su dni es " + dni);
+      // Mostrar con document.write:
+      document.write(
+        'Su nombre es ' +
+          nombre +
+          ', Sus apellidos son ' +
+          apellido1 +
+          ' ' +
+          apellido2 +
+          ', Su direccion es ' +
+          direccion +
+          ', Su telefono es ' +
+          telefono +
+          ', Su dni es ' +
+          dni
+      );
 
-        // Mostrar con innetHTML
-        document.getElementById("innethtml").innerHTML = "Su nombre es " + nombre + ", Sus apellidos son " + apellido1 + " " + apellido2 + ", Su direccion es " + direccion + ", Su telefono es " + telefono + ", Su dni es " + dni;
+      // Mostrar con innetHTML
+      document.getElementById('innethtml').innerHTML =
+        'Su nombre es ' +
+        nombre +
+        ', Sus apellidos son ' +
+        apellido1 +
+        ' ' +
+        apellido2 +
+        ', Su direccion es ' +
+        direccion +
+        ', Su telefono es ' +
+        telefono +
+        ', Su dni es ' +
+        dni;
 
-        //Mostrar con console.log:
-        console.log("Su nombre es " + nombre + ", Sus apellidos son " + apellido1 + " " + apellido2 + ", Su direccion es " + direccion + ", Su telefono es " + telefono + ", Su dni es " + dni);
+      //Mostrar con console.log:
+      console.log(
+        'Su nombre es ' +
+          nombre +
+          ', Sus apellidos son ' +
+          apellido1 +
+          ' ' +
+          apellido2 +
+          ', Su direccion es ' +
+          direccion +
+          ', Su telefono es ' +
+          telefono +
+          ', Su dni es ' +
+          dni
+      );
     </script>
-</body>
-
+  </body>
 </html>

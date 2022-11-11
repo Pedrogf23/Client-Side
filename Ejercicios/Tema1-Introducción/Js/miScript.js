@@ -1,4 +1,4 @@
 function diAlgo() {
-  alert("Algo");
+  alert('Algo');
 }
 diAlgo();
