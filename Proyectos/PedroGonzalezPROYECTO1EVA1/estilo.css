@@ -9,7 +9,7 @@
   grid-template-rows: repeat(var(--num-filas), 32px);
 }
 
-#tablero div {
+#tablero div:hover {
   background-color: #bbbbbb;
   border-left: 2px solid #d3d3d3;
   border-top: 2px solid #d3d3d3;
