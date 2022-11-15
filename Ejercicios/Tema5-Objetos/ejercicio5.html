@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <script>
+      function Cometa(diametro, temperatura, nombre) {
+        this.diametro = diametro;
+        this.temperatura = temperatura;
+        this.nombre = nombre;
+      }
+
+      Cometa.prototype.def =
+        'Un cometa es un cuerpo celeste constituido por polvo, rocas y partículas de hielo que orbita alrededor del Sol siguiendo diferentes trayectorias elípticas.';
+
+      Cometa.prototype.getRadio = function () {
+        return this.diametro / 2;
+      };
+
+      Cometa.prototype.getTemp = function () {
+        return this.temperatura * 1.8 + 32;
+      };
+
+      let c1 = new Cometa(10, 30, 'c1');
+      let c2 = new Cometa(50, 10, 'c2');
+      let c3 = new Cometa(4, 100, 'c3');
+
+      console.log(c1.diametro + ' ' + c1.temperatura + ' ' + c1.nombre + ' ' + c1.def + ' ' + c1.getRadio() + ' ' + c1.getTemp());
+      console.log(c2.diametro + ' ' + c2.temperatura + ' ' + c2.nombre + ' ' + c2.def + ' ' + c2.getRadio() + ' ' + c2.getTemp());
+      console.log(c3.diametro + ' ' + c3.temperatura + ' ' + c3.nombre + ' ' + c3.def + ' ' + c3.getRadio() + ' ' + c3.getTemp());
+    </script>
+  </body>
+</html>
