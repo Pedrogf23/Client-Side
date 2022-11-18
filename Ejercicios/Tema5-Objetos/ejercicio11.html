@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 11</title>
+  </head>
+  <body>
+    <script>
+      function Posicion(x, y) {
+        this.x = x;
+        this.y = y;
+
+        this.distancia = function (pos2) {
+          return Math.sqrt((this.x - pos2.x) ** 2 + (this.y - pos2.y) ** 2);
+        };
+      }
+
+      let pos1 = new Posicion(-5, 2);
+      let pos2 = new Posicion(6, -3);
+
+      console.log(pos1.distancia(pos2));
+    </script>
+  </body>
+</html>

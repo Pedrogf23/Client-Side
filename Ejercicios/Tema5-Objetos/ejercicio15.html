@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 15</title>
+  </head>
+  <body>
+    <p id="p">Pulsa un botón</p>
+    <button onclick="muestraHora()">Hora</button>
+    <button onclick="muestraDiaSem()">Día semana</button>
+    <button onclick="muestraDiaMes()">Día Mes</button>
+    <button onclick="muestraMes()">Mes</button>
+    <button onclick="muestraAnyo()">Año</button>
+    <button onclick="muestraFecha()">Fecha Local</button>
+    <script>
+      const fecha = new Date();
+
+      function muestraHora() {
+        document.getElementById('p').innerHTML = fecha.getHours() + ':' + fecha.getMinutes() + ':' + fecha.getSeconds();
+      }
+      function muestraDiaSem() {
+        switch (fecha.getDay()) {
+          case 0:
+            document.getElementById('p').innerHTML = 'Domingo';
+            break;
+          case 1:
+            document.getElementById('p').innerHTML = 'Lunes';
+            break;
+          case 2:
+            document.getElementById('p').innerHTML = 'Martes';
+            break;
+          case 3:
+            document.getElementById('p').innerHTML = 'Miércoles';
+            break;
+          case 4:
+            document.getElementById('p').innerHTML = 'Jueves';
+            break;
+          case 5:
+            document.getElementById('p').innerHTML = 'Viernes';
+            break;
+          case 6:
+            document.getElementById('p').innerHTML = 'Sábado';
+            break;
+        }
+      }
+      function muestraDiaMes() {
+        document.getElementById('p').innerHTML = fecha.getDate();
+      }
+      function muestraMes() {
+        switch (fecha.getMonth()) {
+          case 0:
+            document.getElementById('p').innerHTML = 'Enero';
+            break;
+          case 1:
+            document.getElementById('p').innerHTML = 'Febrero';
+            break;
+          case 2:
+            document.getElementById('p').innerHTML = 'Marzo';
+            break;
+          case 3:
+            document.getElementById('p').innerHTML = 'Abril';
+            break;
+          case 4:
+            document.getElementById('p').innerHTML = 'Mayo';
+            break;
+          case 5:
+            document.getElementById('p').innerHTML = 'Junio';
+            break;
+          case 6:
+            document.getElementById('p').innerHTML = 'Julio';
+            break;
+          case 7:
+            document.getElementById('p').innerHTML = 'Agosto';
+            break;
+          case 8:
+            document.getElementById('p').innerHTML = 'Septiembre';
+            break;
+          case 9:
+            document.getElementById('p').innerHTML = 'Octubre';
+            break;
+          case 10:
+            document.getElementById('p').innerHTML = 'Noviembre';
+            break;
+          case 11:
+            document.getElementById('p').innerHTML = 'Diciembre';
+            break;
+        }
+      }
+      function muestraAnyo() {
+        document.getElementById('p').innerHTML = fecha.getFullYear();
+      }
+      function muestraFecha() {
+        document.getElementById('p').innerHTML = fecha.toLocaleString();
+      }
+    </script>
+  </body>
+</html>
