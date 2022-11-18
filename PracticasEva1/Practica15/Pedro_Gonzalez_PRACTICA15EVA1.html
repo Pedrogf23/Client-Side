@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      // Clase ordenador
       function Ordenador(marca, modelo, ram = 4, capacidad = 512, pulgadas = 17) {
         this.marca = marca;
         this.modelo = modelo;
@@ -16,18 +17,43 @@
         this.pulgadas = pulgadas;
 
         this.toString = function () {
+          let toString = '';
           for (let i in this) {
             if (typeof this[i] != 'function') {
-              console.log(`${i} --> ${this}`);
+              toString += `${i} --> ${this[i]}, `;
             }
           }
+          return toString;
         };
       }
 
-      function Portatil(marca, modelo, ram = 4, capacidad = 512, pulgadas = 17, autonomia) {
+      // Clase portatil
+      function Portatil(marca, modelo, ram = 4, capacidad = 512, pulgadas = 17, autonomia = 6) {
+        // Herencia de ordenador
         this.prototype = new Ordenador(marca, modelo, ram, capacidad, pulgadas);
         this.autonomia = autonomia;
+
+        this.toString = function () {
+          let toString = '';
+          for (let i in this) {
+            if (typeof this[i] != 'function') {
+              toString += `${i} --> ${this[i]}, `;
+            }
+          }
+          return toString;
+        };
       }
+
+      let ordenador1 = new Ordenador('nfortec', 'draco v2');
+      let ordenador2 = new Ordenador('nfortex', 'neon', 32, 1024, 20);
+
+      let portatil1 = new Portatil('hp', 'pavilion');
+      let portatil2 = new Portatil('racer', 'gaming', 16, 256, 15, 10);
+
+      console.log(ordenador1.toString());
+      console.log(ordenador2.toString());
+      console.log(portatil1.toString());
+      console.log(portatil2.toString());
     </script>
   </body>
 </html>
