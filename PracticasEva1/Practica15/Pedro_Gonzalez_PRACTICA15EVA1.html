@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Herencia</title>
+  </head>
+  <body>
+    <script>
+      function Ordenador(marca, modelo, ram = 4, capacidad = 512, pulgadas = 17) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ram = ram;
+        this.capacidad = capacidad;
+        this.pulgadas = pulgadas;
+
+        this.toString = function () {
+          for (let i in this) {
+            if (typeof this[i] != 'function') {
+              console.log(`${i} --> ${this}`);
+            }
+          }
+        };
+      }
+
+      function Portatil(marca, modelo, ram = 4, capacidad = 512, pulgadas = 17, autonomia) {
+        this.prototype = new Ordenador(marca, modelo, ram, capacidad, pulgadas);
+        this.autonomia = autonomia;
+      }
+    </script>
+  </body>
+</html>
