@@ -8,33 +8,33 @@
   </head>
   <body>
     <script>
-      let pedido = {
-        idPedido: 'faa-8444',
-        pedidos: [
-          {
-            idProducto: 'info005',
-            nombre: 'Placa_Arduino_one',
-            destinoPostal: 'abarcable',
-          },
-          {
-            idProducto: 'info041',
-            nombre: 'Placa_Raspberry_3',
-            destinoPostal: 'No abarcable',
-          },
-          {
-            idProducto: 'gadget024',
-            nombre: 'usb_Multi_5puertos',
-            destinoPostal: 'abarcable',
-          },
-        ],
-      };
+      let miJSON =
+        '{"idPedido":"faa-8444",' +
+        '"pedidos":"[{' +
+        '"idProducto":"info005",' +
+        '"nombre":"Placa_Arduino_one",' +
+        '"destinoPostal":"abarcable",' +
+        '},' +
+        '{' +
+        '"idProducto":"info041",' +
+        '"nombre":"Placa_Raspberry_3",' +
+        '"destinoPostal":"No abarcable",' +
+        '},' +
+        '{' +
+        '"idProducto":"gadget024",' +
+        '"nombre":"usb_Multi_5puertos",' +
+        '"destinoPostal":"abarcable",' +
+        '}]"' +
+        '}';
 
       // Paso de JSON a objeto:
-      let obj = JSON.parse(pedido);
+      let obj = JSON.parse(miJSON);
       // Paso de objero a array:
       const array = Object.entries(obj);
       //Paso de array a map:
       const map = new Map(array);
+
+      console.log(map.get('idPedido'));
     </script>
   </body>
 </html>
