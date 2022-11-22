@@ -11,9 +11,10 @@
     <script>
       // Función que muestra x valores de la sucesión de fibonacci.
       function fibonacci(x, next, num1 = 0, num2 = 1) {
-        document.getElementById('parrafo').innerHTML += ' ' + num1;
         if (x != 0) {
           fibonacci(x - 1, num1 + num2, num2, num1 + num2);
+        } else {
+          document.getElementById('parrafo').innerHTML += ' ' + num1;
         }
       }
       fibonacci(10);
