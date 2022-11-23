@@ -4,21 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Herencia</title>
+    <title>JSON to Map</title>
+    <link rel="stylesheet" href="estilo.css" />
   </head>
   <body>
     <script>
-      let miJSON =
-        '{"idPedido":"faa-8444","pedidos":"[{"idProducto":"info005","nombre":"Placa_Arduino_one","destinoPostal":"abarcable"},{"idProducto":"info041","nombre":"Placa_Raspberry_3","destinoPostal":"No abarcable"},{"idProducto":"gadget024","nombre":"usb_Multi_5puertos","destinoPostal":"abarcable"}]"}';
+      function jsonToMap(json) {
+        // Paso de JSON a objeto:
+        let obj = JSON.parse(json);
+        // Paso de objero a array:
+        let array = Object.entries(obj);
+        //Paso de array a map:
+        let map = new Map(array);
+        return map;
+      }
 
-      // Paso de JSON a objeto:
-      let obj = JSON.parse(miJSON);
-      // Paso de objero a array:
-      const array = Object.entries(obj);
-      //Paso de array a map:
-      const map = new Map(array);
+      let miJSON = `{"idPedido":"faa-8444","pedidos":[{"idProducto":"info005","nombre":"Placa_Arduino_one","destinoPostal":"abarcable"},{"idProducto":"info041","nombre":"Placa_Raspberry_3","destinoPostal":"No abarcable"},{"idProducto":"gadget024","nombre":"usb_Multi_5puertos","destinoPostal":"abarcable"}]}`;
 
-      console.log(map.get('idPedido'));
+      const map = jsonToMap(miJSON);
+
+      document.write('<table>');
+      document.write('<tr>');
+      document.write('<th class="idPedido"><em>' + map.get('idPedido') + '</em></th>');
+      document.write('<th>Producto</th>');
+      document.write('<th>Nombre</th>');
+      document.write('<th>Destino</th>');
+      document.write('</tr>');
+      for (let i = 0; i < map.get('pedidos').length; i++) {
+        document.write('<tr>');
+        document.write(`<td class="productos">Producto ${i}</td>`);
+        document.write(`<td>${map.get('pedidos')[i].idProducto}</td>`);
+        document.write(`<td>${map.get('pedidos')[i].nombre}</td>`);
+        document.write(`<td>${map.get('pedidos')[i].destinoPostal}</td>`);
+        document.write('</tr>');
+      }
+      document.write('</table>');
     </script>
   </body>
 </html>

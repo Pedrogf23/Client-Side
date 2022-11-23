@@ -1,0 +1,15 @@
+table {
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 2em;
+}
+tr:nth-child(even) {
+  background-color: #dcdcdc;
+}
+td,
+th {
+  padding: 1vw;
+}
+th.idPedido {
+  text-decoration: underline;
+}
