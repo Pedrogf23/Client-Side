@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <button onclick="datosScreen()">Púlsame</button>
+    <p id="id"></p>
+    <script>
+      function datosScreen() {
+        let x = '';
+
+        x += 'Primera coordenada superior útil: ' + screen.availTop + 'px.<br>';
+        x += 'Primera coordenada izquierda útil: ' + screen.availLeft + 'px.<br>';
+        x += 'Altura disponible (sin barra de tareas): ' + screen.availHeight + 'px.<br>';
+        x += 'Anchura disponible (sin barra de tareas): ' + screen.availWidth + 'px.<br>';
+        x += 'Altura disponible: ' + screen.height + 'px.<br>';
+        x += 'Anchura disponible: ' + screen.width + 'px.<br>';
+        x += 'Orientación de la pantalla: ' + screen.orientation.type + '.<br>';
+        x += 'Profundidad de color de la pantalla: ' + screen.colorDepth + ' bits.<br>';
+
+        document.getElementById('id').innerHTML = x;
+      }
+    </script>
+  </body>
+</html>

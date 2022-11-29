@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <p id="parrafo"></p>
+    <script>
+      document.getElementById('parrafo').innerHTML = 'Las cookies ';
+      if (!navigator.cookieEnabled) {
+        document.getElementById('parrafo').innerHTML += 'no ';
+      }
+      document.getElementById('parrafo').innerHTML += 'están activadas. <br>';
+
+      document.getElementById('parrafo').innerHTML += 'Java ';
+      if (!navigator.javaEnabled()) {
+        document.getElementById('parrafo').innerHTML += 'no ';
+      }
+      document.getElementById('parrafo').innerHTML += 'está activado. <br>';
+
+      document.getElementById('parrafo').innerHTML += 'Esta página está en ';
+      if (navigator.language == 'es-ES') {
+        document.getElementById('parrafo').innerHTML += 'español. ';
+      } else if (navigator.language == 'en-EN') {
+        document.getElementById('parrafo').innerHTML += 'inglés. ';
+      }
+      document.getElementById('parrafo').innerHTML += '<br>';
+
+      document.getElementById('parrafo').innerHTML += 'El navegador ';
+      if (navigator.onLine) {
+        document.getElementById('parrafo').innerHTML += 'no ';
+      }
+      document.getElementById('parrafo').innerHTML += 'está trabajando online. <br>';
+
+      document.getElementById('parrafo').innerHTML += 'El navegador ';
+      if (!navigator.userAgent.startsWith('Gecko')) {
+        document.getElementById('parrafo').innerHTML += 'no ';
+      }
+      document.getElementById('parrafo').innerHTML += 'usa el motor Gecko. <br>';
+    </script>
+  </body>
+</html>
