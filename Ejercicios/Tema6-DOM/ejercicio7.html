@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 7</title>
+  </head>
+  <body>
+    <button onclick="ventana()">Ventana</button>
+    <script>
+      function ventana() {
+        let miVentana = window.open(',', '_blank', 'width=300, height=450');
+        miVentana.document.write('<p>Altura: ' + miVentana.innerHeight + 'px<p>');
+        miVentana.document.write('<p>Anchura: ' + miVentana.innerWidth + 'px<p>');
+        miVentana.document.write('<p>Altura de la pantalla: ' + screen.height + 'px<p>');
+        miVentana.document.write('<p>Anchura de la pantalla: ' + screen.width + 'px<p>');
+        let timeout = setTimeout(function () {
+          miVentana.close();
+        }, 10000);
+      }
+    </script>
+  </body>
+</html>
