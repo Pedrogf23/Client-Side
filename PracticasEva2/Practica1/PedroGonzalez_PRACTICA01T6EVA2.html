@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos vamos</title>
+  </head>
+  <body>
+    <!-- Botón que cuando es pulsado llama a la función 'google'. -->
+    <button onclick="google();">¡¡Nos vamos!!</button>
+  </body>
+  <script>
+    // Función duckDuck, que cambia el objeto location de la página por 'https://www.duckduckgo.com'.
+    function duckDuck() {
+      location.href = 'https://www.duckduckgo.com';
+    }
+    // Función google, que cambia el objeto location de la página por 'https://www.google.com'.
+    function google() {
+      location.href = 'https://www.google.com';
+    }
+    // Intervalo que, cuando pasan 5000ms (5s) llama a la función 'duckDuck'.
+    setInterval(duckDuck, 5000);
+  </script>
+</html>
