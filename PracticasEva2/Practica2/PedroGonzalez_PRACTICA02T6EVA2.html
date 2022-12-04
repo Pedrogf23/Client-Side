@@ -1460,6 +1460,9 @@
       laboriosam voluptates tempora. Sunt alias eaque nobis autem.
     </p>
     <script>
+      // Intervalo que, cuando pasan 5000ms (5s), crea un objeto scroll cuya propiedad
+      // 'top' es el 'scrollHeight' de la página, para que así se desplace hasta el final
+      // de la misma con un desplazamiento suave (behavior: 'smooth').
       setInterval(function () {
         let Scroll = {
           top: document.body.scrollHeight,
