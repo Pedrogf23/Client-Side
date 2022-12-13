@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 19</title>
+  </head>
+  <body>
+    <input value="Escribe aqui..." />
+    <button onclick="soloLee()">Solo lectura</button>
+    <script>
+      let entrada = document.querySelector('input');
+      let button = document.querySelector('button');
+      function soloLee() {
+        if (entrada.hasAttribute('readonly')) {
+          entrada.removeAttribute('readonly');
+          button.innerHTML = 'Solo lectura';
+          entrada.setAttribute('value', 'Escribe aqui...');
+        } else {
+          entrada.toggleAttribute('readonly');
+          entrada.setAttribute('value', 'No se permite escritura');
+          button.innerHTML = 'Lectura/Escritura';
+        }
+      }
+    </script>
+  </body>
+</html>
