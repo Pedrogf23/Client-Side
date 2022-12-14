@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 21</title>
+  </head>
+  <body>
+    <ul>
+      <li class="verdura">Lechuga</li>
+      <li class="verdura">Tomates</li>
+      <li class="carne">Pollo</li>
+      <li class="verdura">Remolacha</li>
+      <li class="carne">Ternera</li>
+      <li class="legumbre">Garbanzos</li>
+      <li class="legumbre">Lentejas</li>
+      <li class="carne">Cerdo</li>
+      <li class="verdura">Berenjena</li>
+      <li class="legumbre">Habas</li>
+    </ul>
+    <script>
+      let ul = document.getElementsByTagName('li');
+      for (li of ul) {
+        if (li.getAttribute('class') == 'carne') {
+          li.style.color = 'red';
+        } else if (li.getAttribute('class') == 'verdura') {
+          li.style.color = 'green';
+        } else if (li.getAttribute('class') == 'legumbre') {
+          li.style.color = 'brown';
+        }
+
+        if (li.textContent == 'Remolacha' || li.textContent == 'Tomates') {
+          li.style.fontWeight = 'bold';
+        }
+      }
+    </script>
+  </body>
+</html>
