@@ -5,38 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 23</title>
-    <style>
-      .fondoAzul {
-        background-color: blue;
-      }
-      .negrita {
-        font-weight: bold;
-      }
-      .textoRojo {
-        color: red;
-      }
-    </style>
   </head>
   <body>
-    <div id="div">¡¡Transfórmame!!</div>
-    <button onclick="darFormato()">Dar formato</button>
-    <button onclick="quitarFormato()">Quitar formato</button>
-    <button onclick="toggleFormato()">Intercambiar formato</button>
+    <section id="s1">
+      <h1 id="titulo">Texto del título</h1>
+      <p id="p1">Texto del <strong>párrafo 1</strong> completo</p>
+      <p id="p2">Texto del párrafo 2</p>
+      <p id="p3">Texto del párrafo 3</p>
+    </section>
     <script>
-      let s = document.getElementById('div');
-      function darFormato() {
-        s.classList.add('fondoAzul', 'negrita', 'textoRojo');
-      }
-
-      function quitarFormato() {
-        s.classList.remove('fondoAzul', 'negrita', 'textoRojo');
-      }
-
-      function toggleFormato() {
-        s.classList.toggle('fondoAzul');
-        s.classList.toggle('negrita');
-        s.classList.toggle('textoRojo');
-      }
+      console.log(document.getElementById(p1).firstChild.nextSibling.parentElement.nodeValue);
     </script>
   </body>
 </html>
