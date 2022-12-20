@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 24</title>
+  </head>
+  <body>
+    <section id="s1">
+      <h1 id="titulo">Texto del título</h1>
+      <p id="p1">Texto del <strong>párrafo 1</strong> completo</p>
+      <p id="p2">Texto del párrafo 2</p>
+      <p id="p3">Texto del párrafo 3</p>
+    </section>
+    <script>
+      console.log('¿Cuántos nodos hijo tiene la sección s1? -> ' + s1.childNodes.length);
+      console.log();
+
+      console.log('¿Y cuántos elementos? -> ' + s1.childElementCount);
+      console.log();
+
+      // 3. Crea una variable el1 que contenga el primer elemento hijo de s1.
+      let el1 = s1.firstElementChild;
+
+      console.log('¿Cuál es el nombre del primer elemento hijo de s1? -> ' + el1.nodeName);
+      console.log();
+
+      console.log('Obtén el nombre de todos los elementos hijo de s1:');
+      for (let hijo of s1.children) {
+        console.log(hijo.nodeName);
+      }
+      console.log();
+
+      // 6. Crea una variable llamada elHermano que contenga el hermano siguiente de el1.
+      let elHermano = el1.nextElementSibling;
+
+      console.log('Deberías estar en parrafo1, ¿cuántos elementos hijo tiene? -> ' + elHermano.childElementCount);
+      console.log();
+
+      console.log('Muestra el nombre y valor de sus elementos:');
+      for (let hijo of s1.children) {
+        console.log(`Texto: "${hijo.nodeValue}",\n` + `Tipo de nodo: ${hijo.nodeType},\n` + `Nombre: ${hijo.nodeName}`);
+      }
+      console.log();
+
+      console.log('Muestra el nombre y valor de sus nodos:');
+      for (let hijo of s1.childNodes) {
+        console.log(`Texto: "${hijo.nodeValue}",\n` + `Tipo de nodo: ${hijo.nodeType},\n` + `Nombre: ${hijo.nodeName}`);
+      }
+    </script>
+  </body>
+</html>

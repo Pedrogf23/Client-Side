@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Añade párrafos</title>
+  </head>
+  <body>
+    <ol id="ol">
+      <li>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse illo unde officia molestias, laborum expedita ipsa quos quaerat eos consequatur rerum, voluptates dolore
+        impedit incidunt excepturi in et? Earum, quo?
+      </li>
+      <li>
+        Magnam, vel nulla odio explicabo obcaecati soluta ipsam alias dolore, cupiditate corrupti quod dolor. Corrupti reprehenderit blanditiis soluta natus iusto illo! Facilis
+        repellendus deleniti atque quae animi ex at enim?
+      </li>
+      <li>
+        Similique quam perspiciatis architecto ut inventore nostrum dolorum est dolore magnam maxime aliquid error sapiente deserunt, tenetur repudiandae vitae eligendi culpa, ab
+        at? Tenetur exercitationem molestiae eveniet, molestias aut dolor!
+      </li>
+      <li>
+        Minima consequuntur excepturi commodi officiis ullam suscipit deserunt doloremque consequatur perspiciatis! Dignissimos praesentium, odio quasi quod consequuntur fugiat
+        dolorem illum tempore id ipsa, quae magnam! Aliquid, ducimus. Sequi, ratione similique.
+      </li>
+      <li>
+        Ipsum vero nobis fugiat consequuntur, est praesentium vel exercitationem nemo architecto maiores eveniet reiciendis debitis numquam. Nisi similique nulla numquam suscipit
+        tenetur! Sint saepe inventore quo adipisci odio assumenda obcaecati!
+      </li>
+      <li>
+        Quae provident id enim nobis, expedita eos illo rerum inventore accusamus aliquid incidunt magni, animi ad optio! Nulla perferendis officia perspiciatis molestiae sequi ex
+        quo error, labore fugit non dolorem.
+      </li>
+      <li>
+        Neque in sequi deserunt perspiciatis accusantium dolorem ratione debitis laudantium natus, autem atque delectus dolor recusandae error modi excepturi corrupti asperiores
+        pariatur placeat cum, culpa et eius. Veniam, amet molestiae.
+      </li>
+      <li>
+        Voluptatum doloremque exercitationem molestias natus et maxime? Unde quo est fuga, veritatis sapiente quasi quia hic labore! Itaque repellat dignissimos rerum ea incidunt
+        odio doloremque, enim quaerat qui error molestiae.
+      </li>
+      <li>
+        Dignissimos molestias molestiae vitae harum, dolorem voluptate a ex doloribus cum distinctio laudantium rem nemo, debitis amet eos aliquam asperiores dicta at suscipit in
+        voluptatibus? Totam dolorem cum facere est?
+      </li>
+    </ol>
+    <script>
+      let newLi = document.createElement('li'); // Creación de un nuevo elemento li.
+      newLi.innerHTML = 'Soy el nuevo párrafo.'; // Contenido del nuevo elemento li.
+
+      // Se le pregunta al usuario por la posición en la que quiere introducir el nuevo li.
+      let pos = prompt('Indica la posición en la que quiere introducir el nuevo párrafo (1 - 10)');
+
+      // Expresión regular para validar lo recibido del usuario.
+      let regex = /(^[1-9]$)|(^10$)|(^null$)/; // Número entre 1 y 9; o 10;o null.
+
+      while (!regex.test(pos)) {
+        // Mientras pos no concuerde con la expresión regular.
+        pos = prompt('La posición debe estar entre 1 y 10.'); // Se pregunta de nuevo.
+      }
+
+      if (pos != null) {
+        // Si pos no es null
+        let li = document.querySelectorAll('#ol li')[pos - 1]; // Selecciona el párrafo que va a ser el siguiente al que vamos a introducir.
+        document.getElementById('ol').insertBefore(newLi, li); // Introduce el nuevo párrafo antes.
+      }
+    </script>
+  </body>
+</html>
