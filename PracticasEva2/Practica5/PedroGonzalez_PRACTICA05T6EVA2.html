@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="s1">
+      <h1>Título</h1>
+      <p>Ejemplo de documento <strong>DOM</strong> Visión en árbol</p>
+    </section>
+    <section id="s2">
+      <p>Aquí solo hay texto</p>
+    </section>
+    <script>
+      // Función que muestra toda la estructura en árbol de la página.
+      function muestraElementos(root) {
+        console.log('Elemento ' + root.nodeName); // Primero muestra el nombre del elemento actual.
+
+        // Si el elemento tiene atributos, los recorre mostrando uno a uno nombre y valor.
+        if (root.attributes.length > 0) {
+          console.log('Atributos de ' + root.nodeName + ':');
+          for (atr of root.attributes) {
+            console.log(atr.name + ' => ' + atr.value);
+          }
+        }
+        // Si el elemento tiene hijos, los muestra y luego muestra la información de cada uno de ellos.
+        if (root.children.length > 0) {
+          console.log('Hijos de ' + root.nodeName + ':');
+          // Primero muestra todos los hijos.
+          for (child of root.children) {
+            console.log(child.nodeName);
+          }
+          console.log(' ');
+          // Luego muestra la información de cada hijo.
+          for (child of root.children) {
+            muestraElementos(child);
+            console.log(' ');
+          }
+        }
+      }
+
+      let html = document.getElementsByTagName('html')[0]; // Elemento raíz desde el cual se empieza a mostrar información.
+      muestraElementos(html); // Llamada a la función.
+    </script>
+  </body>
+</html>
