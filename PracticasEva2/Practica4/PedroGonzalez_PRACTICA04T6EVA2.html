@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuenta palabras</title>
+  </head>
+  <body>
+    <main id="parrafos">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, officiis! Similique, accusamus perspiciatis temporibus possimus cumque explicabo molestias ad cum nemo
+        unde harum minima, doloribus, tempore ut quos eos consectetur.
+      </p>
+      <p>
+        Eos iste aperiam doloremque, officiis maiores atque? Nulla, fugit. Odit vero, ipsa quae neque ullam, ab culpa aspernatur voluptas, qui laborum reprehenderit soluta
+        reiciendis exercitationem autem magnam ut nobis ducimus?
+      </p>
+      <p>
+        Ratione nobis nisi eaque natus illo temporibus accusamus, sapiente commodi sequi eligendi ad ipsam est nulla a autem, quas animi earum obcaecati cum repellat voluptatem
+        vero sed dicta reiciendis. Maiores.
+      </p>
+      <p>
+        Esse suscipit consequuntur id laboriosam? Tenetur, totam minus eos perspiciatis error reiciendis dolor eveniet porro recusandae ipsam cupiditate qui voluptas facilis velit
+        vel asperiores libero! Soluta maiores incidunt saepe quidem!
+      </p>
+      <p>
+        Laborum libero, vel quaerat dolorum dicta labore eveniet, saepe culpa repudiandae reiciendis, exercitationem distinctio minus eum illo aperiam. Esse, atque. Eligendi
+        delectus accusantium autem nesciunt, hic magni expedita. Eligendi, sequi?
+      </p>
+    </main>
+    <script>
+      function cuentaPalabras(p) {
+        // Función que cuenta las palabras que haya en un elemento html.
+        let primerEspacio = /^ /; // Expresion regular para evitar espacios al principio.
+        let ultimoEspacio = / $/; // Expresión regular para evitar espacios al final.
+        let variosEspacios = /[ ]+/g; // Expresión regular para evitar varios espacios juntos.
+        p.innerText.replace(primerEspacio, ''); // Se sustituyen los espacios al inicio por ''.;
+        p.innerText.replace(ultimoEspacio, ''); // Se sustituyen los espacios al final por ''.;
+        p.innerText.replace(variosEspacios, ' '); // Se sustituyen los espacios agrupados por uno solo.;
+
+        let espacios = 0; // Variable que almacena el número de espacios.
+        for (let i = 0; i < p.innerText.length; i++) {
+          // Bucle que recorre el texto caracter a caracter.
+          if (p.innerText[i] == ' ') {
+            // Condicional para comprobar si el caracter actual es un espacio.
+            espacios++; // En caso de que si lo sea, aumenta el número de espacios.
+          }
+        }
+        return espacios + 1; // Devuelve el número de espacios más uno, porque siempre habrá una palabra más que espacios.
+      }
+
+      let main = document.getElementById('parrafos');
+
+      let palabrasTotal = 0;
+      for (p of main.children) {
+        palabrasTotal += cuentaPalabras(p);
+      }
+
+      let numPalabras = document.createElement('p');
+      numPalabras.innerText = 'Hay ' + palabrasTotal + ' palabras en total.';
+      numPalabras.style.fontWeight = 'bold';
+      main.insertBefore(numPalabras, document.querySelector('#parrafos p:first-child'));
+    </script>
+  </body>
+</html>
